@@ -1,0 +1,22 @@
+default: &amp;default
+  adapter: postgresql
+  host: localhost
+  port: 5432
+  encoding: utf8
+  pool: 5
+  database: event-cal-api
+  username: development
+  password: development
+development: &amp;default
+  adapter: postgresql
+  host: localhost
+  port: 5432
+  encoding: utf8
+  pool: 5
+  database: event-cal-api-dev
+  username: development
+  password: development
+
+test:
+
+production:
