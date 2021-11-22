@@ -5,9 +5,9 @@ class Api::V1::EventsController < ApplicationController
     #### using wsdl with savon gem does work due to SSL error (invalid certificate
     #### client = Savon.client(wsdl: 'https://test.resortsuitemobile.com:3002/wso2wsas/services/RSWS?wsdl')
     
-    host = "https://test.resortsuitemobile.com:3002"
+    host = "https://test.resortsuitemobile.com"
     path = "/wso2wsas/services/RSWS.RSWSSOAP"
-    http = Net::HTTP.new(host)
+    http = Net::HTTP.new(host, '3002')
 
     xml = '
 			<?xml version="1.0" encoding="UTF-8" ?>
